@@ -26,7 +26,7 @@ const getFocusType = () => (hasInteracted() || !isIos())
     ? FOCUS_TYPES.REAL
     : FOCUS_TYPES.FAKE
 const focus = (input) => {
-    switch getFocusType() {
+    switch(getFocusType()) {
         case FOCUS_TYPES.REAL:
             return input.focus()
         case FOCUS_TYPES.FAKE:
