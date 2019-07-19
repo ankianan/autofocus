@@ -3,9 +3,16 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Autofocus</title>
+	<style type="text/css">
+		input:focus,
+		input.has-focus {
+		    border: solid green;
+		    color: black;
+		}
+	</style>
 </head>
 <body>
-<input autofocus="">
+<input autofocus="" placeholder="input" />
 </body>
 <script>
 	const isIos = () => !!window.navigator.userAgent.match(/iPad|iPhone/i)
