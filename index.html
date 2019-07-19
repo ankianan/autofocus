@@ -11,11 +11,11 @@
 	const isIos = () => !!window.navigator.userAgent.match(/iPad|iPhone/i)
 const hasInteracted = (() => {
     let interacted = false
-    const onTouchStart = {
+    const onTouchStart = ()=>{
         interacted = true
         document.removeEventListener(onTouchStart)
     }
-    document.addEventListener('touchstart', onTouchStart')
+    document.addEventListener('touchstart', onTouchStart)
     return () => interacted
 })()
 const FOCUS_TYPES = {
